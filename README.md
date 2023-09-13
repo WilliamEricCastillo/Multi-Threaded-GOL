@@ -1,4 +1,4 @@
-# Multi-Threaded-GOL
+# Multi-Threaded Game of Life
 This is a Java program that simulates Conway's Game of Life using multi-threading.
 
 ## Overview
