@@ -1,8 +1,23 @@
 # Multi-Threaded Game of Life
-This is a Java program that simulates Conway's Game of Life using multi-threading.
+This Java program simulates Conway's Game of Life using multi-threading.
 
-## Overview
-Conway's Game of Life is a cellular automaton simulation that models the evolution of cells on a grid. In this program, we provide a multi-threaded implementation to efficiently compute generations of the game.
+## Rules of the Game
+
+1. **Cell States**: The game is played on a grid of cells and each cell can be in one of two states:<br> 'alive' ( represented by 'X') or "dead" ( represented by '.').
+2. **Neighborhood**: Each cell has eight neighbors, which are the cells horizontally, vertically, and diagonally adjacent to it.
+3. **Birth**: A dead cell becomes alive in the next generation if it has exactly three live neighbors.
+4. **Survival**: A live cell continues to live in the next generation if it has either two or three live neighbors.
+5. **Death**: In all other cases, a cell dies or remains dead in the next generation.
+6. **Time Advancement**: The game evolves one generation at a time. All cells are updated simultaneously based on the rules.
+   
+These rules lead to complex patterns and behaviors, and the Game of Life is known for its ability to produce interesting and sometimes unpredictable patterns.
+
+## Techniques Used
+
+- **Multi-Threading**: The program leverages multi-threading for concurrent cell state computation, enhancing performance.
+- **Object-Oriented Design**: An object-oriented approach was utilized with classes such as `Board`, `ComputeCell`, and `CellState` for modularity and structure.
+- **File Input**: Initial configurations are read from a text file to set up the grid.
+- **Efficient Grid Management**: The program efficiently manages the grid using loops and 2D arrays for state updates and board display.
 
 ## How to Run
 
@@ -15,9 +30,10 @@ Conway's Game of Life is a cellular automaton simulation that models the evoluti
 6. Run the program to simulate the game for a specified number of generations.
 7. View the final state of the grid in the console output.
 
-## Example Input File
+## Example Input Txt File
 
-The input file should contain the initial state of the grid, where 'X' represents live cells, '.' represents dead cells, and '15' represents the number of generations. For example:
+The input file should contain the initial state of the grid, where 'X' represents live cells and  '.' represents dead cells. <br> The number '15' at the bottom of the grid, represents the number of generations that will be executed. <br> 
+<br> For example:
 
 ```
 ....................
